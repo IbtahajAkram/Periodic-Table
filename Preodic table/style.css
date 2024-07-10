@@ -1,0 +1,55 @@
+table {
+    border-collapse:separate;
+    width: 100%;
+}
+.mainHead{
+    background-color: yellow;
+}
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+
+
+.spacer {
+    background-color: transparent;
+    border: none;
+}
+
+td::after {
+    content: attr(data-text);
+    display: none;
+    position: absolute;
+    background-color: rgba(206, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+td:hover {
+    transform: rotate(360deg);
+    border-radius: 7px;
+}
+td:hover::after {
+    display: block;
+}
+#bordernone{
+  
+    background-color: transparent;
+}
+
+td{
+    cursor: pointer;
+}
+
+
+td {
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
